@@ -1,5 +1,5 @@
 [build]
-  publish = "."
+  publish = "mi-portfolio"
   command = ""
 
 [[redirects]]
