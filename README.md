@@ -6,6 +6,8 @@
 
 [![Ver mi portafolio](https://github.com/Patriciaddc80/PATRICIA-DIAZ/assets/98458936/f886dd2c-62bd-4926-b883-bde1d5f9d567)](https://patriciadiaz.dev)
 
+👉 [**Visita mi portafolio aquí**](https://patriciadiaz.dev)
+
 ## Quien soy
 
 Soy un desarrolladora web, apasionada por la tecnología con enfoque particular en el diseño frontend o el diseño de interfaz del usuario.
