@@ -4,7 +4,7 @@
 
 ### Frontend web developer | UX/UI Designer
 
-![Patricia Díaz - CV](https://github.com/Patriciaddc80/PATRICIA-DIAZ/assets/98458936/f886dd2c-62bd-4926-b883-bde1d5f9d567)
+[![Ver mi portafolio](https://github.com/Patriciaddc80/PATRICIA-DIAZ/assets/98458936/f886dd2c-62bd-4926-b883-bde1d5f9d567)](https://patriciadiaz.dev)
 
 ## Quien soy
 
@@ -67,17 +67,23 @@ Mi pasión por el diseño y el frontend es mi superpoder, ¡y estoy emocionada p
 
 ## Proyectos Destacados
 
-### RSVP-BODA
+1. **Mi Portfolio**
 
-Web para boda con confirmación de asistencia
+   [![Ver mi portafolio](https://github.com/Patriciaddc80/PATRICIA-DIAZ/assets/98458936/f886dd2c-62bd-4926-b883-bde1d5f9d567)](https://patriciadiaz.dev)
 
-### Administrador de productos
+   Visita mi portafolio para conocer mis proyectos, experiencia y habilidades como desarrolladora frontend.
 
-Aplicación creada con HTML, CSS, Tailwind y JS, gestiona de manera fácil y sencilla los artículos de una tienda.
+2. **RSVP-BODA**
 
-### Nebulon
+   Web para boda con confirmación de asistencia
 
-En desarrollo
+3. **Administrador de productos**
+
+   Aplicación creada con HTML, CSS, Tailwind y JS, gestiona de manera fácil y sencilla los artículos de una tienda.
+
+4. **Nebulon**
+
+   En desarrollo
 
 ---
 
