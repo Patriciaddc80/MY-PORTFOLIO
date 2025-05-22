@@ -4,7 +4,7 @@
 
 ### Frontend web developer | UX/UI Designer
 
-[![Ver mi portafolio](https://github.com/Patriciaddc80/PATRICIA-DIAZ/assets/98458936/f886dd2c-62bd-4926-b883-bde1d5f9d567)](https://patriciadiaz.dev)
+[![Ver mi portafolio](https://github.com/Patriciaddc80/PATRICIA-DIAZ/assets/98458936/f886dd2c-62bd-4926-b883-bde1d5f9d567)]([https://patriciadiaz.dev](https://patriciadiazdev.netlify.app/))
 
 ## Quien soy
 
