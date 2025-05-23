@@ -51,7 +51,7 @@ body {
 }
 
 section {
-    padding: 100px 0;
+    padding: 60px 0 40px 0;
 }
 
 a {
@@ -75,7 +75,7 @@ header {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(100, 255, 218, 0.1);
     height: 80px;
-    padding: 15px 2rem;
+    padding: 15px 0rem;
 }
 
 header .container {
@@ -299,8 +299,7 @@ h1 {
     margin-bottom: 2rem;
     font-weight: 500;
     width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .hero-description {
@@ -385,7 +384,7 @@ h1 {
 }
 
 .about-text p a {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .skills-list {
@@ -637,7 +636,7 @@ h1 {
 
 /* Footer */
 footer {
-    padding: 2rem 0;
+    padding: 1rem 0;
     text-align: center;
 }
 
@@ -653,10 +652,56 @@ footer {
     font-size: 0.9rem;
 }
 
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--accent-color);
+    background: none;
+    box-shadow: none;
+    transition: border-color 0.3s, border-width 0.3s;
+}
+
+.footer-socials a:hover {
+    border-width: 2px;
+    border-color: #fff;
+}
+
+.footer-socials img {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(0.1) brightness(1.1);
+    transition: filter 0.3s;
+}
+
+.footer-wave {
+    overflow: hidden;
+    line-height: 0;
+}
+
+.footer-svg {
+    fill: #e9fffa;
+    width: 308%;
+    height: 85px;
+    transform: scaleX(-1);
+    display: block;
+    margin: 0 auto -4px auto;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     h1, .hero-subtitle {
-        font-size: 2.5rem;
+        font-size: 35px;
     }
     .hero-subtitle {
         white-space: normal;
@@ -717,11 +762,13 @@ footer {
 
 @media (max-width: 900px) {
     nav {
-        display: flex;
-        align-items: center;
+        gap: 5rem;
         justify-content: space-between;
-        gap: 2rem;
         padding: 0 2rem;
+    }
+    .logo {
+        margin-right: 4rem;
+        font-size: 1.1rem;
     }
     .logo img {
         width: 50px;
@@ -811,27 +858,32 @@ footer {
         align-items: center;
     }
     .hero-socials {
-        flex-direction: row;
-        position: static;
-        width: 100vw;
-        height: auto;
-        border-radius: 0 0 10px 10px;
-        margin-top: 1rem;
-        padding: 1rem 0.5rem;
+        display: none;
+    }
+    .hero-socials-mobile {
+        display: flex;
+        margin: 2rem 0 0 0;
+        gap: 1.5rem;
+        background: #c0ecdb;
+        padding: 1rem 0;
+        border-radius: 10px 10px 0 0;
+        box-shadow: 0px -2px 20px rgb(193 255 232);
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 @media (max-width: 600px) {
-    .hero-socials {
-        display: none;
-    }
     nav {
-        gap: 2rem;
+        gap: 3.5rem;
         justify-content: space-between;
-        padding: 0 1.5rem;
+        padding: 0 1.2rem;
     }
     .logo {
-        margin-left: 0;
+        margin-right: 2.5rem;
+        font-size: 0.9rem;
     }
     .logo img {
         width: 45px;
@@ -893,4 +945,44 @@ footer {
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+}
+
+.nav-socials {
+    display: none;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+    .nav-socials {
+        display: flex;
+    }
+}
+
+.nav-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #111;
+    border-radius: 50%;
+    transition: color 0.3s, background 0.3s;
+}
+
+.nav-socials img {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(0.3) brightness(0.7);
+    transition: filter 0.3s;
+}
+
+.nav-socials a:hover {
+    background: #111;
+    box-shadow: 0 0 12px 2px var(--accent-color), 0 0 32px 8px rgba(100,255,218,0.2);
+}
+
+.nav-socials a:hover img {
+    filter: invert(54%) sepia(98%) saturate(749%) hue-rotate(120deg) brightness(102%) contrast(101%);
 }
