@@ -2,15 +2,14 @@
 
 ## Me llamo Patricia Díaz
 
-### Frontend web developer | UX/UI Designer
-
 [![Ver mi portafolio](https://github.com/Patriciaddc80/PATRICIA-DIAZ/assets/98458936/f886dd2c-62bd-4926-b883-bde1d5f9d567)](https://patriciadiaz.dev)
 
 👉 [**Visita mi portafolio aquí**](https://patriciadiaz.dev)
 
 ## Quien soy
 
-Soy un desarrolladora web, apasionada por la tecnología con enfoque particular en el diseño frontend o el diseño de interfaz del usuario.
+Soy un diseñadora web, apasionada por la tecnología con enfoque particular en el diseño frontend o el diseño de interfaz del usuario.
+
 🎨 Mi misión es crear diseños que no solo sean bonitos 😍, también funcionales, fáciles de usar, limpios, que dejen un click en cada una de ellas de como hago mi trabajo y como me inspira lo que hago.
 
 Desde que comencé en este camino, me he sumergido dominando tecnologías como HTML, CSS y JavaScript. 💻 Disfruto al máximo transformando ideas creativas en productos web interactivos y accesibles. Siempre estoy buscando mejorar mis habilidades para brindar experiencias de usuario increíbles.

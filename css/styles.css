@@ -699,9 +699,11 @@ footer {
 }
 
 /* Responsive design */
+
+
 @media (max-width: 768px) {
     h1, .hero-subtitle {
-        font-size: 35px;
+        font-size: 3rem;
     }
     .hero-subtitle {
         white-space: normal;

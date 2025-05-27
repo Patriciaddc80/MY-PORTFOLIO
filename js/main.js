@@ -52,10 +52,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // animation
 const typingText = document.getElementById('typing-text');
 const skills = [
-    "Desarrolladora web, experta en frontend",
-    "Especialista en UX/UI",
-    "Creadora de experiencias digitales",
-    "Desarrolladora Vue.js"
+    "Diseñadora web", 
+    "Experta en el frontend",
+    "Especialista en UX/UI"
 ];
 
 let currentSkillIndex = 0;
