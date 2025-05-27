@@ -2,7 +2,9 @@
 
 ## Me llamo Patricia Díaz
 
-[![Ver mi portafolio](https://github.com/Patriciaddc80/PATRICIA-DIAZ/assets/98458936/f886dd2c-62bd-4926-b883-bde1d5f9d567)](https://patriciadiaz.dev)
+### Frontend web developer | UX/UI Designer
+
+[![Ver mi portafolio](https://github.com/Patriciaddc80/PATRICIA-DIAZ/assets/98458936/f886dd2c-62bd-4926-b883-bde1d5f9d567)](https://patriciadiazdev.netlify.app/)
 
 👉 [**Visita mi portafolio aquí**](https://patriciadiaz.dev)
 
