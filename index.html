@@ -14,6 +14,130 @@
     <link rel="icon" type="image/webp" href="./images/emoji-patri3.WebP">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gradient-1: linear-gradient(45deg, #0a0908, #1a1a1a);
+            --gradient-2: linear-gradient(45deg, #64ffda, #00ffd5);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background: var(--gradient-1);
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(100, 255, 218, 0.1), transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .wave-emoji {
+            display: inline-block;
+            animation: wave 2s infinite;
+            transform-origin: 70% 70%;
+            filter: invert(54%) sepia(98%) saturate(749%) hue-rotate(120deg) brightness(102%) contrast(101%);
+            opacity: 0.7;
+        }
+
+        .cta-button {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(100, 255, 218, 0.2);
+            border-color: var(--accent-color);
+        }
+
+        .featured-project {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .featured-project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: var(--accent-color);
+        }
+
+        .featured-image img {
+            transition: all 0.5s ease;
+        }
+
+        .featured-project:hover .featured-image img {
+            transform: scale(1.05);
+        }
+
+        .nav-links a {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-2);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::before {
+            transform: translateX(0);
+        }
+
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(14deg); }
+            20% { transform: rotate(-8deg); }
+            30% { transform: rotate(14deg); }
+            40% { transform: rotate(-4deg); }
+            50% { transform: rotate(10deg); }
+            60% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-2);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .section-title:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
 </head>
 
 <body>
@@ -30,10 +154,12 @@
                     <a href="#contact" class="nav-link">CONTACTO</a>
                     <a href="#resume" class="nav-link">CURRÍCULUM</a>
                     <div class="nav-socials">
-                        <a href="https://www.linkedin.com/in/patriciadiaz/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <a href="https://www.linkedin.com/in/patriciadiaz/" target="_blank" rel="noopener noreferrer"
+                            title="LinkedIn">
                             <img src="images/logo-linkedin.png" alt="LinkedIn" width="28" height="28">
                         </a>
-                        <a href="https://github.com/Patriciaddc80" target="_blank" rel="noopener noreferrer" title="GitHub">
+                        <a href="https://github.com/Patriciaddc80" target="_blank" rel="noopener noreferrer"
+                            title="GitHub">
                             <img src="images/github.png" alt="GitHub" width="28" height="28">
                         </a>
                     </div>
@@ -51,11 +177,11 @@
         <section id="hero">
             <div class="container style=position:relative">
                 <div class="hero-content">
-                    <h1>HOLA, SOY PATRICIA DÍAZ</h1>
+                    <h1>HOLA, SOY PATRICIA DÍAZ<span class="wave-emoji">👋</span></h1>
                     <h2 class="hero-subtitle"><span id="typing-text"></span><span class="cursor">|</span></h2> <br>
-                    <h3> Soy una diseñadora web especializada en el frontend, creo y gestiono sitios web con mucho arte
-                        y creatividad.
-                    </h3> <br>
+                    <h3> QUE PLACER VERTE POR AQUÍ </h3> <br>
+                    <P>"Aquí descubrirás un poco sobre mí y mi trabajo. Espero que te guste lo que encuentres y, sobre
+                        todo, que sea justo lo que estás buscando."</P> <br>
                     <a href="#projects" class="cta-button">Ver mis proyectos</a>
                 </div>
             </div>
@@ -70,35 +196,38 @@
             <h2 class="section-title">Sobre mí</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Soy un diseñadora web especializada en el frontend, creo y gestiono sitios web.
-                        Consulta algunos de mis trabajos en la sección de <a href="#projects">Proyectos</a>
+                    <p>Soy diseñadora web especializada en maquetación. Me apasiona crear diseños donde los usuarios
+                        encuentren valor y funcionalidad. Mi enfoque es minimalista, pero me adapto a las necesidades de
+                        cada proyecto para ofrecer experiencias únicas y memorables.
 
-                        También me gusta compartir contenido relacionado con lo que he aprendido a lo largo de los años
-                        en desarrollo web para que pueda ayudar a otros miembros de la comunidad de desarrolladores. No
-                        dudes en conectarte o seguirme en mi <a href="https://www.linkedin.com/in/patriciadiaz/" target="_blank" rel="noopener noreferrer">LinkedIn</a> e <a href="https://www.instagram.com/patriciadiaz" target="_blank" rel="noopener noreferrer">Instagram</a>, donde publico contenido útil sobre
-                        desarrollo web y programación.
+                        Puedes consultar algunos de mis trabajos en la sección de <a href="#projects">Proyectos</a>.
+                        Puedes consultar algunos de mis trabajos en la sección de <a href="#projects">Proyectos</a>.
+                        No dudes en contactarme o seguirme en <a href="https://www.linkedin.com/in/patriciadiaz/"
+                            target="_blank" rel="noopener noreferrer">LinkedIn</a>
 
-                        Estoy abierto a oportunidades laborales donde pueda contribuir, aprender y crecer. Si encuentras
+                        Estoy abierta a oportunidades laborales donde pueda contribuir, aprender y crecer. Si encuentras
                         una buena oportunidad que se ajuste a mis habilidades y experiencia, no dudes en contactarme
 
                     <h4>Estas son algunas tecnologías y herramientas importantes con las que he estado trabajando
                         recientemente:
-                    <ul class="skills-list">
-                        <li>HTML
-                        <li>CSS
-                        <li>JavaScript (ES6+)
-                        <li>Vue
-                        <li>React
-                        <li>Node.js
-                        <li>Bootstrap
-                        <li>Tailwind CSS
-                        <li>WordPress
-                        <li>MySQL
-                        <li>Git
-                        <li>GitHub
-                    </ul>
+                        <ul class="skills-list">
+                            <li>HTML
+                            <li>CSS
+                            <li>JavaScript (ES6+)
+                            <li>Vue
+                            <li>React
+                            <li>Node.js
+                            <li>Bootstrap
+                            <li>Tailwind CSS
+                            <li>WordPress
+                            <li>MySQL
+                            <li>Git
+                            <li>GitHub
+                        </ul>
                 </div>
-                <div class="about-image" style="width: 800px; height: 100%;"><img alt="Tu foto" src="images/me.jpeg" loading="lazy" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;"></div>
+                <div class="about-image" style="width: 300px; height: 300px; margin: 0 auto;"><img alt="Tu foto"
+                        src="images/me.jpeg" loading="lazy"
+                        style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;"></div>
             </div>
         </div>
     </section>
@@ -135,7 +264,8 @@
                     </div>
                     <div class="featured-image">
                         <a href="https://rsvp-wedding-fawn.vercel.app/" target="_blank" rel="noopener noreferrer">
-                            <img alt="Rsvp Wedding" src="images/project-rsvp.png" loading="lazy" width="600" height="450">
+                            <img alt="Rsvp Wedding" src="images/project-rsvp.png" loading="lazy" width="600"
+                                height="450">
                         </a>
                     </div>
                 </div>
@@ -167,8 +297,10 @@
                                     src="images/loom-img.ico"></a></div>
                     </div>
                     <div class="featured-image">
-                        <a href="https://adminsitrador-de-productos.vercel.app/" target="_blank" rel="noopener noreferrer">
-                            <img alt="Administradors de productos" src="images/project-admind.png" loading="lazy" width="600" height="450">
+                        <a href="https://adminsitrador-de-productos.vercel.app/" target="_blank"
+                            rel="noopener noreferrer">
+                            <img alt="Administradors de productos" src="images/project-admind.png" loading="lazy"
+                                width="600" height="450">
                         </a>
                     </div>
                 </div>
@@ -178,11 +310,13 @@
                             <p class="featured-label">Proyecto destacado
                             <h3 class="featured-title">HELMETS NEBULON</h3>
                             <div class="featured-description">
-                                <h3><a href="https://helmets-nebulon.netlify.app/"
-                                        target="_blank">Helmets website</a></h3>
+                                <h3><a href="https://helmets-nebulon.netlify.app/" target="_blank">Helmets website</a>
+                                </h3>
                             </div>
-                            <p>Proyecto de una tienda de cascos para astronautas desarrollado con Html, Css y JavaScript. Permite a los
-                                usuarios ver los productos disponibles y agregarlos al carrito de compras. La interfaz es
+                            <p>Proyecto de una tienda de cascos para astronautas desarrollado con Html, Css y
+                                JavaScript. Permite a los
+                                usuarios ver los productos disponibles y agregarlos al carrito de compras. La interfaz
+                                es
                                 intuitiva y fácil de usar, con un diseño moderno y responsivo.
                             <ul class="featured-tech-list">
                                 <li>Html
@@ -192,10 +326,11 @@
                                 <li>Vue
                             </ul>
                             <div class="project-links">
-                                <a href="https://github.com/Patriciaddc80/HELMETS-NEBULON" target="_blank" rel="noopener noreferrer"
-                                    title="Ver código en GitHub"><img alt="GitHub" src="images/logo-github.png"></a>
-                                <a href="https://github.com/Patriciaddc80/HELMETS-NEBULON"
-                                    target="_blank" rel="noopener noreferrer" title="Ver demo en Loom"><img alt="Demo"
+                                <a href="https://github.com/Patriciaddc80/HELMETS-NEBULON" target="_blank"
+                                    rel="noopener noreferrer" title="Ver código en GitHub"><img alt="GitHub"
+                                        src="images/logo-github.png"></a>
+                                <a href="https://github.com/Patriciaddc80/HELMETS-NEBULON" target="_blank"
+                                    rel="noopener noreferrer" title="Ver demo en Loom"><img alt="Demo"
                                         src="images/loom-img.ico"></a>
                             </div>
                         </div>
@@ -212,11 +347,12 @@
     <section id="contact">
         <div class="container">
             <h2 class="contact-title">¿Qué sigue?
-            <p class="contact-heading">Ponte en contacto</p>
-            <p class="contact-text">Actualmente estoy buscando nuevas oportunidades. Mi bandeja de entrada siempre está
-                abierta, ya sea como colaborar en un proyecto, crear una interfaz completa o trabajar codo a codo.
-            <h4>¡haré todo lo posible por responderte!</h4>
-            </p><a href="mailto:patriciaddc80@gmail.com" class="cta-button">Envíame un correo</a>
+                <p class="contact-heading">Ponte en contacto</p>
+                <p class="contact-text">Actualmente estoy buscando nuevas oportunidades. Mi bandeja de entrada siempre
+                    está
+                    abierta, ya sea como colaborar en un proyecto, crear una interfaz completa o trabajar codo a codo.
+                <h4>¡haré todo lo posible por responderte!</h4>
+                </p><a href="mailto:patriciaddc80@gmail.com" class="cta-button">Envíame un correo</a>
         </div>
     </section>
     <div class="footer-wave">
@@ -235,7 +371,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-socials">
-                    <a href="https://www.linkedin.com/in/patriciadiaz/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/patriciadiaz/" target="_blank" rel="noopener noreferrer"
+                        title="LinkedIn">
                         <img src="images/logo-linkedin.png" alt="LinkedIn" width="28" height="28">
                     </a>
                     <a href="https://github.com/Patriciaddc80" target="_blank" rel="noopener noreferrer" title="GitHub">

@@ -25,7 +25,9 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
-
+p{
+    font-size: 1.1rem;
+}
 @keyframes float {
     to {
         transform: translateY(-10px) rotate(5deg);
@@ -128,12 +130,14 @@ nav {
 .nav-links {
     display: flex;
     gap: 2rem;
+   
 }
 
 .nav-links a {
     color: var(--text-color);
     position: relative;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; 
+   font-size: 1rem;
 }
 
 .nav-links a::after {
