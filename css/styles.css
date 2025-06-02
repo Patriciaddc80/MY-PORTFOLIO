@@ -25,6 +25,202 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+
+/* Nuevos estilos para el avatar */
+.min-h-screen {
+    min-height: auto;
+}
+
+.dark\:bg-slate-800 {
+    background-color: var(--bg-color);
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.bg-gray-100 {
+    background-color: #f3f4f6;
+}
+
+.dark\:bg-gray-700 {
+    background-color: #374151;
+}
+
+.relative {
+    position: relative;
+}
+
+.shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.hover\:shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.group {
+    position: relative;
+}
+
+.rounded-xl {
+    border-radius: 0.75rem;
+}
+
+.p-5 {
+    padding: 1.25rem;
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+}
+
+.duration-500 {
+    transition-duration: 500ms;
+}
+
+.transform {
+    transform: translateZ(0);
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.w-32 {
+    width: 8rem;
+}
+
+.h-32 {
+    height: 8rem;
+}
+
+.group-hover\:w-36:hover {
+    width: 9rem;
+}
+
+.group-hover\:h-36:hover {
+    height: 9rem;
+}
+
+.object-center {
+    object-position: center;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.delay-500 {
+    transition-delay: 500ms;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.text-gray-600 {
+    color: #4b5563;
+}
+
+.dark\:text-gray-200 {
+    color: #e5e7eb;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-gray-400 {
+    color: #9ca3af;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+.group-hover\:opacity-100:hover {
+    opacity: 1;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.group-hover\:bottom-1:hover {
+    bottom: 0.25rem;
+}
+
+.-bottom-16 {
+    bottom: -4rem;
+}
+
+.bg-gray-600 {
+    background-color: #4b5563;
+}
+
+.dark\:bg-gray-100 {
+    background-color: #f3f4f6;
+}
+
+.right-1 {
+    right: 0.25rem;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.dark\:text-gray-600 {
+    color: #4b5563;
+}
+
 p{
     font-size: 1.1rem;
 }
