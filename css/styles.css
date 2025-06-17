@@ -290,16 +290,19 @@ nav {
 }
 
 .logo {
-    margin-right: 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     min-width: 160px;
     max-width: 90vw;
     height: 48px;
     padding: 0.2rem 0.8rem;
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
+    position: relative;
+    color: #fff;
+    transition: color 0.2s;
 }
 
 .logo img {
@@ -970,10 +973,6 @@ footer {
         justify-content: space-between;
         padding: 0 2rem;
     }
-    .logo {
-        margin-right: 4rem;
-        font-size: 1.1rem;
-    }
     .logo img {
         width: 50px;
         height: 50px;
@@ -1085,17 +1084,14 @@ footer {
         justify-content: space-between;
         padding: 0 1.2rem;
     }
-    .logo {
-        margin-right: 1rem;
-        font-size: 1rem;
-        min-width: 160px;
-        max-width: 90vw;
-        height: 48px;
-        padding: 0.2rem 0.8rem;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        gap: 0.7rem;
+    @media (max-width: 600px) {
+        .logo {
+            margin-right: 1rem;
+            font-size: 1rem;
+            min-width: 276px;
+            max-width: 90vw;
+            height: 54px;
+        }
     }
     .logo img {
         width: 38px;
