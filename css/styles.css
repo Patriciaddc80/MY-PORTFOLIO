@@ -908,10 +908,11 @@ footer {
 
 @media (max-width: 768px) {
     h1, .hero-subtitle {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .hero-subtitle {
         white-space: normal;
+        font-size: 1.8rem;
     }
     .nav-links {
         display: none;
