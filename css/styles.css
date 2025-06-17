@@ -1124,7 +1124,7 @@ footer {
     display: inline-block;
     width: 2px;
     height: 1em;
-    background-color: currentColor;
+    background-color: #64ffda;
     margin-left: 2px;
     animation: blink 1s infinite;
 }
