@@ -90,4 +90,47 @@ function typeText() {
 
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeText, 1000); 
-}); 
+});
+
+// Animación de palabras clave en la mini-presentación
+const keywords = ["Creativa", "Apasionada", "Resolutiva", "Colaborativa", "Innovadora", "Curiosa"];
+let kwIndex = 0;
+const miniKeyword = document.getElementById("mini-keyword");
+if (miniKeyword) {
+    setInterval(() => {
+        kwIndex = (kwIndex + 1) % keywords.length;
+        miniKeyword.textContent = keywords[kwIndex];
+    }, 2200);
+}
+
+// Mostrar/ocultar y funcionalidad del botón scroll-to-top
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        scrollToTopBtn.style.display = 'flex';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+if (scrollToTopBtn) {
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// Funcionalidad del botón scroll-down-btn
+const scrollDownBtn = document.getElementById('scrollDownBtn');
+const aboutSection = document.getElementById('about');
+if (scrollDownBtn && aboutSection) {
+    scrollDownBtn.addEventListener('click', () => {
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+    });
+}
+
+// Funcionalidad del indicador de scroll tipo mouse
+const mouseScrollIndicator = document.getElementById('mouseScrollIndicator');
+if (mouseScrollIndicator && aboutSection) {
+    mouseScrollIndicator.addEventListener('click', () => {
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+    });
+} 

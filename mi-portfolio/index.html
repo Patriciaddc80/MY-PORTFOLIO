@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de Patricia Díaz - Desarrolladora web especializada en frontend, creando experiencias digitales accesibles y centradas en el usuario. Explora mis proyectos y habilidades en desarrollo web.">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="./images/emoji-patri3.WebP" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/webp" href="./images/emoji-patri3.WebP">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos modernos actualizados */
+        :root {
+            --gradient-1: linear-gradient(45deg, #0a0908, #1a1a1a);
+            --gradient-2: linear-gradient(45deg, #64ffda, #00ffd5);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background: var(--gradient-1);
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(100, 255, 218, 0.1), transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .wave-emoji {
+            display: inline-block;
+            animation: wave 2s infinite;
+            transform-origin: 70% 70%;
+            filter: invert(54%) sepia(98%) saturate(749%) hue-rotate(120deg) brightness(102%) contrast(101%);
+            opacity: 0.7;
+        }
+
+        .cta-button {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(100, 255, 218, 0.2);
+            border-color: var(--accent-color);
+        }
+
+        .featured-project {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .featured-project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: var(--accent-color);
+        }
+
+        .featured-image img {
+            transition: all 0.5s ease;
+        }
+
+        .featured-project:hover .featured-image img {
+            transform: scale(1.05);
+        }
+
+        .nav-links a {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-2);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::before {
+            transform: translateX(0);
+        }
+
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(14deg); }
+            20% { transform: rotate(-8deg); }
+            30% { transform: rotate(14deg); }
+            40% { transform: rotate(-4deg); }
+            50% { transform: rotate(10deg); }
+            60% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gradient-2);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .section-title:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="/" class="logo" style="background: #353c4a; border-radius: 14px; box-shadow: 0 4px 16px rgba(0,0,0,0.13); padding: 0.5rem 1.2rem; display: flex; align-items: center; gap: 1rem;">
+                    <img src="images/me.jpeg" alt="Patricia Díaz" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; box-shadow: 0 1px 4px rgba(0,0,0,0.08);">
+                    <div>
+                        <div style="font-weight: bold; color: #fff; font-size: 1rem; margin-bottom: 0.1rem;">Patricia Díaz</div>
+                        <div style="color: #bfc7d5; font-size: 0.95rem;">FRONTEND DEVELOPER</div>
+                    </div>
+                </a>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link">SOBRE MÍ</a>
+                    <a href="#projects" class="nav-link">PROYECTOS</a>
+                    <a href="#contact" class="nav-link">CONTACTO</a>
+                    <div class="nav-socials">
+                        <a href="https://www.linkedin.com/in/patriciadiaz/" target="_blank" rel="noopener noreferrer"
+                            title="LinkedIn">
+                            <img src="images/logo-linkedin.png" alt="LinkedIn" width="28" height="28">
+                        </a>
+                        <a href="https://github.com/Patriciaddc80" target="_blank" rel="noopener noreferrer"
+                            title="GitHub">
+                            <img src="images/github.png" alt="GitHub" width="28" height="28">
+                        </a>
+                    </div>
+                </div>
+                <button aria-expanded="false" aria-label="Abrir menú de navegación" class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <div class="nav-overlay"></div>
+            </nav>
+        </div>
+    </header>
+    <div class="hero-wrapper">
+        <section id="hero">
+            <div class="container style=position:relative">
+                <div class="hero-content">
+                    <h1>HOLA, SOY PATRICIA DÍAZ<span class="wave-emoji">👋</span></h1>
+                    <p class="hero-inspiration">Transformo ideas en experiencias digitales memorables.</p>
+                  
+                    <h2 class="hero-subtitle"><span id="typing-text"></span><span class="cursor">|</span></h2> <br>
+                    <h3> QUE PLACER VERTE POR AQUÍ </h3> <br>
+                    <P>"Aquí descubrirás un poco sobre mí y mi trabajo. Espero que te guste lo que encuentres y, sobre
+                        todo, que sea justo lo que estás buscando."</P> <br>
+                    <a href="#projects" class="cta-button">Ver mis proyectos</a>
+                    <div class="skills-icons">
+                        <div class="skill-icon"><img src="images/html5.png" alt="HTML5" title="HTML5"><span>HTML5</span></div>
+                        <div class="skill-icon"><img src="images/css3.png" alt="CSS3" title="CSS3"><span>CSS3</span></div>
+                        <div class="skill-icon"><img src="images/js.png" alt="JavaScript" title="JavaScript"><span>JavaScript</span></div>
+                        <div class="skill-icon"><img src="images/react.png" alt="React" title="React"><span>React</span></div>
+                        <div class="skill-icon"><img src="images/vue.png" alt="Vue" title="Vue"><span>Vue</span></div>
+                        <div class="skill-icon"><img src="images/tailwind.png" alt="Tailwind CSS" title="Tailwind CSS"><span>Tailwind</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="hero-socials"><a href="#" target="_blank" title="LinkedIn"><img alt="LinkedIn"
+                    src="images/logo-linkedin.png"></a><a href="https://github.com/Patriciaddc80/RSVP-WEDDING"
+                target="_blank" rel="noopener noreferrer" title="GitHub"><img alt="GitHub"
+                    src="images/github.png"></a></aside>
+    </div>
+    <!-- Indicador de scroll tipo mouse -->
+    <div class="mouse-scroll-indicator" id="mouseScrollIndicator" title="Desplázate hacia abajo">
+        <div class="mouse">
+            <div class="mouse-dot"></div>
+        </div>
+    </div>
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Soy diseñadora web especializada en maquetación. Me apasiona crear diseños donde los usuarios
+                        encuentren valor y funcionalidad. Mi enfoque es minimalista, me adapto a las necesidades de
+                        cada proyecto para ofrecer experiencias únicas y memorables.
+
+                        Puedes consultar algunos de mis trabajos en la sección de <a href="#projects">Proyectos</a>.
+                        No dudes en contactarme o seguirme en <a href="https://www.linkedin.com/in/patriciadiaz/"
+                            target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+                        Estoy abierta a oportunidades laborales donde pueda contribuir, aprender y crecer. Si encuentras
+                        una buena oportunidad que se ajuste a mis habilidades y experiencia, no dudes en contactarme
+
+                    <h4>Estas son algunas tecnologías y herramientas importantes con las que he estado trabajando
+                        recientemente:
+                        <ul class="skills-list">
+                            <li>HTML
+                            <li>CSS
+                            <li>JavaScript (ES6+)
+                            <li>Vue
+                            <li>React
+                            <li>Node.js
+                            <li>Bootstrap
+                            <li>Tailwind CSS
+                            <li>WordPress
+                            <li>MySQL
+                            <li>Git
+                            <li>GitHub
+                        </ul>
+                </div>
+                <div class="about-image" style="width: 300px; height: 300px; margin: 0 auto;"><img alt="Tu foto"
+                        src="images/me.jpeg" loading="lazy"
+                        style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;"></div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Mis proyectos</h2>
+            <div class="featured-projects">
+                <div class="featured-project">
+                    <div class="featured-content">
+                        <p class="featured-label">Proyecto destacado
+                        <h3 class="featured-title">RSVP-BODA</h3>
+                        <div class="featured-description">
+                            <h3><a href="https://rsvp-wedding-fawn.vercel.app/" target="_blank">Web para boda con
+                                    confirmación de asistencia</a></h3>
+                        </div>
+                        <p>Elegante web de boda desarrollada con Vue.js y Tailwind CSS. Combina diseño moderno con
+                            funcionalidad, permitiendo a los invitados confirmar su asistencia de forma interactiva.
+                            Destaca por su interfaz intuitiva, animaciones suaves y diseño responsivo que se adapta
+                            perfectamente a cualquier dispositivo.
+                        <ul class="featured-tech-list">
+                            <li>Html
+                            <li>Css
+                            <li>JavaScript
+                            <li>Tailwind CSS
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/Patriciaddc80/RSVP-WEDDING" target="_blank" rel="noopener noreferrer" title="GitHub"><img alt="GitHub" src="images/logo-github.png"></a>
+                            <a href="https://rsvp-wedding-fawn.vercel.app/" target="_blank" rel="noopener noreferrer" title="Ver web"><img alt="Web" src="images/iweb.png"></a>
+                        </div>
+                    </div>
+                    <div class="featured-image">
+                        <a href="https://rsvp-wedding-fawn.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <img alt="Rsvp Wedding" src="images/project-rsvp.png" loading="lazy" width="600"
+                                height="450">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-projects">
+                <div class="featured-project">
+                    <div class="featured-content">
+                        <p class="featured-label">Proyecto destacado
+                        <h3 class="featured-title">ADMIND DE PRODUCTOS</h3>
+                        <div class="featured-description">
+                            <h3><a href="https://adminsitrador-de-productos.vercel.app/" target="_blank">Administrador
+                                    de productos</a></h3>
+                        </div>
+                        <p>Proyecto de administrador de productos desarrollado con Vue.js y Tailwind CSS. Permite a los
+                            usuarios agregar, editar y eliminar productos, así como ver una lista de todos ellos. La
+                            interfaz es intuitiva y fácil de usar, con un diseño moderno y responsivo.
+                        <ul class="featured-tech-list">
+                            <li>Html
+                            <li>Css
+                            <li>JavaScript
+                            <li>Tailwind CSS
+                            <li>Vue
+                        </ul>
+                        <div class="project-links"><a href="https://github.com/Patriciaddc80/ADMINISTRADOR-DE-PRODUCTOS" target="_blank" rel="noopener noreferrer" title="GitHub"><img alt="GitHub" src="images/logo-github.png"></a><a href="https://adminsitrador-de-productos.vercel.app/" target="_blank" rel="noopener noreferrer" title="Ver web"><img alt="Web" src="images/iweb.png"></a></div>
+                    </div>
+                    <div class="featured-image">
+                        <a href="https://adminsitrador-de-productos.vercel.app/" target="_blank"
+                            rel="noopener noreferrer">
+                            <img alt="Administradors de productos" src="images/project-admind.png" loading="lazy"
+                                width="600" height="450">
+                        </a>
+                    </div>
+                </div>
+                <div class="featured-projects">
+                    <div class="featured-project">
+                        <div class="featured-content">
+                            <p class="featured-label">Proyecto destacado
+                            <h3 class="featured-title">HELMETS NEBULON</h3>
+                            <div class="featured-description">
+                                <h3><a href="https://helmets-nebulon.netlify.app/" target="_blank">Helmets website</a>
+                                </h3>
+                            </div>
+                            <p>Proyecto de una tienda de cascos para astronautas desarrollado con Html, Css y
+                                JavaScript. Permite a los
+                                usuarios ver los productos disponibles y agregarlos al carrito de compras. La interfaz
+                                es
+                                intuitiva y fácil de usar, con un diseño moderno y responsivo.
+                            <ul class="featured-tech-list">
+                                <li>Html
+                                <li>Css
+                                <li>JavaScript
+                                <li>Tailwind CSS
+                                <li>Vue
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/Patriciaddc80/HELMETS-NEBULON" target="_blank" rel="noopener noreferrer" title="GitHub"><img alt="GitHub" src="images/logo-github.png"></a>
+                                <a href="https://helmets-nebulon.netlify.app/" target="_blank" rel="noopener noreferrer" title="Ver web"><img alt="Web" src="images/iweb.png"></a>
+                            </div>
+                        </div>
+                        <div class="featured-image">
+                            <a href="https://helmets-nebulon.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                <img alt="Project" src="images/helmets-website.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2 class="contact-title">¿Qué sigue?
+                <p class="contact-heading">Ponte en contacto</p>
+                <p class="contact-text">Actualmente estoy buscando nuevas oportunidades. Mi bandeja de entrada siempre
+                    está
+                    abierta, ya sea como colaborar en un proyecto, crear una interfaz completa o trabajar codo a codo.
+                <h4>¡haré todo lo posible por responderte!</h4>
+                </p><a href="mailto:patriciaddc80@gmail.com" class="cta-button">Envíame un correo</a>
+        </div>
+    </section>
+    <div class="footer-wave">
+        <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" class="footer-svg">
+            <path
+                d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
+                opacity=".25" />
+            <path
+                d="M0 0v15.81c13 21.11 27.64 41.05 47.69 56.24C99.41 111.27 165 111 224.58 91.58c31.15-10.15 60.09-26.07 89.67-39.8 40.92-19 84.73-46 130.83-49.67 36.26-2.85 70.9 9.42 98.6 31.56 31.77 25.39 62.32 62 103.63 73 40.44 10.79 81.35-6.69 119.13-24.28s75.16-39 116.92-43.05c59.73-5.85 113.28 22.88 168.9 38.84 30.2 8.66 59 6.17 87.09-7.5 22.43-10.89 48-26.93 60.65-49.24V0z"
+                opacity=".5" />
+            <path
+                d="M0 0v5.63C149.93 59 314.09 71.32 475.83 42.57c43-7.64 84.23-20.12 127.61-26.46 59-8.63 112.48 12.24 165.56 35.4C827.93 77.22 886 95.24 951.2 90c86.53-7 172.46-45.71 248.8-84.81V0z" />
+        </svg>
+    </div>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/patriciadiaz/" target="_blank" rel="noopener noreferrer"
+                        title="LinkedIn">
+                        <img src="images/logo-linkedin.png" alt="LinkedIn" width="28" height="28">
+                    </a>
+                    <a href="https://github.com/Patriciaddc80" target="_blank" rel="noopener noreferrer" title="GitHub">
+                        <img src="images/github.png" alt="GitHub" width="28" height="28">
+                    </a>
+                </div>
+                <div class="footer-info">
+                    <p class="footer-credit">Diseñado y desarrollado por Patricia Díaz</p>
+                    <p class="footer-copyright">© 2024 Patricia Díaz. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
