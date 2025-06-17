@@ -421,6 +421,8 @@ nav {
     width: 100vw;
     min-height: 100vh;
     background: transparent;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
 }
 
 #hero {
@@ -907,8 +909,23 @@ footer {
 
 
 @media (max-width: 768px) {
-    h1, .hero-subtitle {
-        font-size: 2.5rem;
+    #hero {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        background: radial-gradient(circle at 50% 0%, rgba(100,255,218,0.08) 0%, transparent 80%);
+        border-radius: 18px;
+    }
+    h1 {
+        font-size: 1.8rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(90deg, #64ffda 30%, #00ffd5 70%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
     }
     .hero-subtitle {
         white-space: normal;
@@ -965,6 +982,17 @@ footer {
         max-width: 500px;
         height: auto;
         object-fit: contain;
+    }
+    .mouse-scroll-indicator {
+        margin: 1.5rem 0 1.5rem 0;
+    }
+    .hero-wrapper {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .mouse {
+        width: 28px;
+        height: 44px;
     }
 }
 
@@ -1374,10 +1402,119 @@ footer {
 
 .wave-emoji {
     display: inline-block;
-    font-size: 1.5em;
-    margin-left: 0.2em;
     animation: wave 2s infinite;
     transform-origin: 70% 70%;
-    filter: drop-shadow(0 0 8px rgba(100, 255, 218, 0.7));
+    opacity: 0.7;
+}
+
+/* Frase inspiradora */
+.hero-inspiration {
+    font-size: 1.1rem;
     color: #64ffda;
+    margin: 0.5rem 0 1.2rem 0;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    animation: fadeIn 1.2s;
+}
+
+/* Mini presentación */
+.mini-presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1.2s;
+}
+.mini-photo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 12px 2px #64ffda44;
+    border: 2px solid #64ffda;
+}
+.mini-role {
+    font-weight: 600;
+    color: #fff;
+    font-size: 1rem;
+}
+.mini-keyword {
+    font-weight: 700;
+    color: #00ffd5;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    animation: keywordChange 2.5s infinite;
+}
+@keyframes keywordChange {
+    0% { opacity: 1; }
+    20% { opacity: 0; }
+    40% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+/* Animaciones de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive para mobile */
+@media (max-width: 768px) {
+    .mini-presentation {
+        gap: 0.4rem;
+        margin-bottom: 0.7rem;
+    }
+    .mini-photo {
+        width: 36px;
+        height: 36px;
+    }
+    .mini-role, .mini-keyword {
+        font-size: 0.92rem;
+    }
+}
+
+/* Indicador de scroll tipo mouse */
+.mouse-scroll-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem 0 2.5rem 0;
+}
+.mouse {
+    width: 36px;
+    height: 60px;
+    border: 2.2px solid #222;
+    border-radius: 20px;
+    position: relative;
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 2px 12px 0 #0001;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.mouse-dot {
+    width: 8px;
+    height: 8px;
+    background: #aaa;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 16px;
+    transform: translateX(-50%);
+    animation: mouseDotMove 1.3s infinite alternate;
+}
+@keyframes mouseDotMove {
+    0% { top: 16px; opacity: 1; }
+    80% { top: 32px; opacity: 0.7; }
+    100% { top: 40px; opacity: 0.2; }
 }
